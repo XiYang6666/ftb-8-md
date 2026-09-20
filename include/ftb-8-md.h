@@ -22,6 +22,10 @@
 #include <stdint.h>
 #include <assert.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 /**
  * @brief Union representing all possible display command formats.
  *
@@ -291,3 +295,7 @@ esp_err_t ftb8md_write_custom_char(spi_device_handle_t handle, int char_index, c
  * @see ftb8md_write_custom_char()
  */
 esp_err_t ftb8md_set_addressed_char(spi_device_handle_t handle, int digit, int char_index);
+
+#ifdef __cplusplus
+}
+#endif
